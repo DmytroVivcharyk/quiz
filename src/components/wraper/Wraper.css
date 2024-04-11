@@ -1,0 +1,8 @@
+.wraper {
+    min-height: 100vh;
+    display: flex;
+}
+
+.wraper main {
+    flex: 1 0 auto;
+}
