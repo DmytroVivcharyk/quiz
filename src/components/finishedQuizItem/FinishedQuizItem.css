@@ -6,8 +6,8 @@
 }
 
 .xMark {
-    color: rgb(32, 243, 32);
     font-weight: 900;
+    font-size: 24px;
 }
 
 .rightAnswer {
@@ -15,5 +15,5 @@
 }
 
 .wrongAnswer {
-    background: rgb(240, 87, 108);
+    color: rgb(240, 87, 108);
 }

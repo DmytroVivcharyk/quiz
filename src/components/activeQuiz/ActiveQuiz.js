@@ -1,18 +1,23 @@
+import { useSelector } from 'react-redux'
+
 import AnswersList from '../answersList/AnswersList'
 import './ActiveQuiz.css'
 
 const ActiveQuiz = () => {
+    const {activeQuestion, questions} = useSelector(state => state.quiz)
+    const {title, answers} = questions[activeQuestion]
+
     return (
         <div className='ActiveQuiz'>
             <div className='activeQuiz__title'>
                 <p>
-                    <strong>6. </strong>
-                    What animal can fly ?
+                    <strong>{activeQuestion + 1}. </strong>
+                    {title} ?
                 </p>
-                <small>6 of 10</small>
+                <small>{activeQuestion + 1} of {questions.length}</small>
             </div>
             <div className='activeQuiz__answers'>
-                <AnswersList />
+                <AnswersList answers={answers}/>
             </div>
         </div>
     )

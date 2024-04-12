@@ -3,12 +3,18 @@ import { faXmark, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 import './FinishedQuizItem.css'
 
-const FinishedQuizItem = () => (
-    <li className='FinishedQuizItem'>
-        <span>1. </span> &nbsp;
-        <span>What animal can fly?</span> &nbsp;
-        <FontAwesomeIcon icon={faCheck} className='xMark' />
-    </li>
-)
+const FinishedQuizItem = ({0: title, 1: state, id}) => {
+    const iconProps = state ? 
+            {icon: faCheck, className: 'xMark rightAnswer'} 
+            : {icon: faXmark, className: 'xMark wrongAnswer'}
+    
+            return(
+        <li className='FinishedQuizItem'>
+            <span>{id + 1}. </span> &nbsp;
+            <span>{title} ?</span> &nbsp;
+            <FontAwesomeIcon {...iconProps}/>
+        </li>
+    )
+}
 
 export default FinishedQuizItem
