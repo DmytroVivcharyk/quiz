@@ -3,6 +3,7 @@
     border-radius: 8px;
     color: #fff;
     padding: 25px;
+    animation: myAppear 1s ease ;
 }
 
 .activeQuiz__title {
@@ -24,4 +25,27 @@
 
 .ActiveQuiz small {
     font-size: 16px;
+}
+
+.ActiveQuizAnimate-enter {
+    opacity: 0.3;
+}
+
+.ActiveQuizAnimate-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms;
+}
+
+.ActiveQuizAnimate-exit {
+    opacity: 1;
+}
+
+.ActiveQuizAnimate-exit-active{
+    opacity: 0.3;
+    transition: opacity 1s;
+}
+
+@keyframes myAppear {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

@@ -3,6 +3,7 @@
     border: 2px solid #fff;
     border-radius: 8px;
     color: #fff;
+    animation: myAppear 1s linear;
 }
 
 .FinishedQuiz ul {
@@ -41,4 +42,18 @@
 
 .FinishedQuiz button:hover {
     background-color: rgba(255, 255, 255, .4)
+}
+
+@keyframes myAppear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes myFade {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.fade {
+    animation: myFade 1s linear;
 }
