@@ -1,9 +1,11 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import quiz from './slices/quizSlice'
+import quizzes from './slices/quizzesSlice'
 
 const rootReducer = combineReducers({
-    quiz
+    quiz,
+    quizzes
 })
 
 export const store = configureStore({

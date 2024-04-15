@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import {restartQuiz} from '../../store/slices/quizSlice'
 import FinishedQuizItem from '../finishedQuizItem/FinishedQuizItem'
@@ -9,6 +10,7 @@ const FinishedQuiz = () => {
     const {questions, results} = useSelector(state => state.quiz)
     const dispatch = useDispatch()
     const finishedComponent = useRef(null) 
+    const navigate = useNavigate()
 
     const righrAnswersCount = Object.values(results).reduce((acc, item) => item? acc += 1: acc, 0)
 
@@ -28,7 +30,7 @@ const FinishedQuiz = () => {
                 }
             </ul>
             <div className='FinishedQuiz__actions'>
-                <button>to quiz list</button>
+                <button onClick={() => {navigate('/')}} >to quiz list</button>
                 <button
                 onClick={onRetry}
                 >retry</button>

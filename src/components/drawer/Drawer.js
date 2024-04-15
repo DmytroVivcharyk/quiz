@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { NavLink } from "react-router-dom";
 import { CSSTransition } from 'react-transition-group';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faBars } from '@fortawesome/free-solid-svg-icons'
@@ -25,11 +26,15 @@ const Drawer = () => {
                 <div className='drawer__title'>
                     <h2>Quiz App</h2>
                 </div>
-                <nav>
+                <nav id="sidebar">
                     <ul>
-                        <li><a href='#3'>Quizes</a></li>
-                        <li><a href='#2'>Create Quiz</a></li>
-                        <li><a href='#1'>Logout</a></li>
+                        <li><NavLink to='/' 
+                        onClick={() => {setIsDrawerOpen(false)}}
+                        ><div>Quizes</div></NavLink></li>
+                        <li><NavLink to='/create-quiz' onClick={() => {setIsDrawerOpen(false)}}
+                        ><div>Create Quiz</div></NavLink></li>
+                        <li><button type='button' onClick={() => {setIsDrawerOpen(false)}}
+                        ><div>Logout</div></button></li>
                     </ul>
                 </nav>
             </div>

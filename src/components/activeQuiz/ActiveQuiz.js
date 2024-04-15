@@ -11,7 +11,6 @@ const ActiveQuiz = () => {
     const nodeRef = useRef(null)
 
     const inProp = Boolean(!userAnswer)
-    console.log(inProp)
 
     return (
         <CSSTransition
