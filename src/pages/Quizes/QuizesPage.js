@@ -12,7 +12,8 @@ const QuizesPage = () => {
     const {isQuizzesLoading, quizzes, quizzesError} = useSelector(state => state.quizzes)
 
     useEffect(() => {
-        dispatch(fetchQuizzes())
+            dispatch(fetchQuizzes())
+        // eslint-disable-next-line 
     }, [])
 
     const quizList = quizzes.map((item, i) => {

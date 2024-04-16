@@ -1,5 +1,32 @@
 .CreateQuizPage {
+    padding: 70px;
     width: 100%;
     height: 100%;
-    background-color: lightsalmon
+    background-image: linear-gradient(to right, #0D0D3F, #4B0082);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
+
+.createQuiz__container {
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.CreateQuizPage h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.createQuiz__actions {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    margin-bottom: 50px;
+}
+

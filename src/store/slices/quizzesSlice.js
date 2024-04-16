@@ -21,10 +21,17 @@ const quizzesSlice = createSlice({
             state.quizzesError = action.payload
             state.isQuizzesLoading = false
         },
+        createNewQuiz : (state, action) => {
+            state.quizzes.push(action.payload)
+        }
     }
 })
 
 const {actions, reducer} = quizzesSlice
 
-export const {quizzesFetching, quizzesFetched, quizzesFetchingError} = actions
+export const {quizzesFetching, 
+                quizzesFetched, 
+                quizzesFetchingError,
+                createNewQuiz
+            } = actions
 export default reducer

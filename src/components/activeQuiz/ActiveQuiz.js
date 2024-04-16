@@ -23,7 +23,7 @@ const ActiveQuiz = () => {
                 <div className='activeQuiz__title'>
                     <p>
                         <strong>{activeQuestion + 1}. </strong>
-                        {title} ?
+                        {title}
                     </p>
                     <small>{activeQuestion + 1} of {questions.length}</small>
                 </div>

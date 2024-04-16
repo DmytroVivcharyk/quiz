@@ -12,7 +12,7 @@ export const onAnswerClicked = (id) => {
     return (dispatch, getState) => {
         const activeId = getState().quiz.activeQuestion
         const {rightAnswerId, title} = getState().quiz.questions[activeId]
-        const userAnswerState = id === rightAnswerId
+        const userAnswerState = id === parseInt(rightAnswerId)
 
         if(getState().quiz.userAnswer) return
 

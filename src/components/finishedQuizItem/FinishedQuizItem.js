@@ -11,7 +11,7 @@ const FinishedQuizItem = ({0: title, 1: state, id}) => {
             return(
         <li className='FinishedQuizItem'>
             <span>{id + 1}. </span> &nbsp;
-            <span>{title} ?</span> &nbsp;
+            <span>{title}</span> &nbsp;
             <FontAwesomeIcon {...iconProps}/>
         </li>
     )

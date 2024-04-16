@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {quizzesFetching, quizzesFetched, quizzesFetchingError} from '../slices/quizzesSlice'
+import {quizzesFetching, quizzesFetched, quizzesFetchingError, createNewQuiz} from '../slices/quizzesSlice'
 
 export const fetchQuizzes = () => {
     return async (dispatch) => {
@@ -20,3 +20,14 @@ export const fetchQuizzes = () => {
         }
     }
 }
+
+// export const createNewQuizHandler = (item) => {
+//     return async dispatch => {
+//         try {
+//            const response = await axios.post('http://localhost:3100/quizzes', item)
+
+//         } catch (e) {
+//             console.error(e)
+//         }
+//     }
+// }
