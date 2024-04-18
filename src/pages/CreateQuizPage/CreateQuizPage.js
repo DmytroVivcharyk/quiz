@@ -1,9 +1,7 @@
 import { useState } from 'react'
-import { useDispatch, UseDispatch } from 'react-redux'
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
 
-import {createNewQuizHandler} from '../../store/actions/quizzesActions'
 import CreateQuestionForm from '../../components/createQuestionForm/CreateQuestionForm'
 import CreateQuizTitleForm from '../../components/createQuizTitleForm/createQuizTitleForm'
 import CreateQyizPannel from '../../components/createQuizPannel/CreateQuizPannel'
@@ -12,7 +10,6 @@ import './CreateQuizPage.css'
 const CreateQuizPage = () => {
     const [quizTitle, setQuizTitle] = useState('')
     const [questions, setQuestion] = useState([])
-    const dispatch = useDispatch()
 
     const addQuestionHandler = (question) => {
         setQuestion(state => [...state, question])
