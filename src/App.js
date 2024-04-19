@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import useIsAuthenticated from 'react-auth-kit/hooks/useIsAuthenticated';
 import RequireAuth from '@auth-kit/react-router/RequireAuth'
 
 import QuizPage from './pages/QuizPage/QuizPage';
