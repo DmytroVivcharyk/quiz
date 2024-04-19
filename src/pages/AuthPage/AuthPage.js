@@ -23,7 +23,6 @@ const AuthPage = () => {
         }
 
         try {
-
             const response = await axios.post('https://dummyjson.com/auth/login', requestBody)
 
             signIn({
