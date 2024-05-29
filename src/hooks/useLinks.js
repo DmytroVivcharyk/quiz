@@ -28,10 +28,10 @@ export const useLinks = (setDrawerState) => {
 
     const links = isUserLogedIn
                     ? privateLinks.map(({Element,title, ...rest }) => (
-                        <li key={title} ><Element {...rest}>{title}</Element></li>
+                        <li key={title} ><Element {...rest}><div>{title}</div></Element></li>
                     ))
                     : publickLinks.map(({Element,title, ...rest }) => (
-                        <li key={title} ><Element {...rest}>{title}</Element></li>
+                        <li key={title} ><Element {...rest}><div>{title}</div></Element></li>
                     ))
 
     return {links}
