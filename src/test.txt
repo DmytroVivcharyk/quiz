@@ -1,2 +1,2 @@
 test git rebase!
-new changeg with git rebase
+new changeg with git rebase from gitHub
